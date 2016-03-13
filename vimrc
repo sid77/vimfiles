@@ -36,7 +36,8 @@ set hlsearch
 set wildmenu
 set wildmode=list:longest,full
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+autocmd filetype go set listchars=tab:\ \ ,trail:•,extends:#,nbsp:.
 
 " The ninties called and they wanted their 80 columns back
 set autoindent
