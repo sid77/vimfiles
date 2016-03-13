@@ -30,7 +30,6 @@ set backspace=indent,eol,start
 set linespace=0
 set number
 set ruler
-"set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
@@ -74,7 +73,6 @@ set splitbelow
 set splitright
 
 " CtrlP
-"set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
