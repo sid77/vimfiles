@@ -1,0 +1,7 @@
+set autoindent
+set number
+set searchincr
+set showmode
+set verbose
+set warn
+set wrapscan
