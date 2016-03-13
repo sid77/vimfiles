@@ -1,12 +1,18 @@
 " Plug
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.py --clang-completer --gocode-completer
+  endif
+endfunction
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer' }
-Plug 'Valloric/YouCompleteMe',
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
@@ -41,25 +47,16 @@ set tabstop=2
 set softtabstop=2
 set textwidth=80
 
-"" Map F6 to indent code
-"map <F6> mzgg=G`z<CR>
+" Markdown support (sorry Modula-2)
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
+" Map TAB to indent code
+map <TAB> mzgg=G`z<CR>
 
 " Mouse
 "set mouse=a
 "set ttymouse=xterm2
-
-"" Map F9 to toggle folding
-"map <buffer> <F9> :call ToggleFold()<CR>
-"let b:folded = 0
-"function! ToggleFold()
-"  if( b:folded == 0 )
-"    exec 'normal! zM'
-"    let b:folded = 1
-"  else
-"    exec 'normal! zR'
-"    let b:folded = 0
-"  endif
-"endfunction
 
 " Colours
 syntax on
