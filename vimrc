@@ -15,16 +15,15 @@ Plug 'tpope/vim-bundler'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'bling/vim-airline'
 Plug 'haya14busa/incsearch.vim'
 Plug 'fatih/vim-go'
 Plug 'nvie/vim-flake8'
-Plug 'majutsushi/tagbar'
 call plug#end()
 
 " General UI options
+set nocompatible
+set encoding=utf-8
 filetype plugin indent on
 set backspace=indent,eol,start
 set linespace=0
@@ -97,6 +96,3 @@ map g/ <Plug>(incsearch-stay)
 " airline
 "let g:airline_powerline_fonts = 1
 set laststatus=2
-
-" tagbar
-nmap <F8> :TagbarToggle<CR>
