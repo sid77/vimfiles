@@ -1,3 +1,8 @@
+" UTF-8 ALL THE THINGS!
+set encoding=utf-8
+set fileencoding=utf-8
+scriptencoding utf-8
+
 " Plug
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
@@ -23,9 +28,12 @@ call plug#end()
 
 " General UI options
 set nocompatible
-set encoding=utf-8
 filetype plugin indent on
+set secure
 set backspace=indent,eol,start
+set breakindent
+set cmdheight=2
+set linebreak
 set linespace=0
 set number
 set ruler
@@ -42,7 +50,7 @@ autocmd filetype go set listchars=tab:\ \ ,trail:•,extends:#,nbsp:.
 set autoindent
 set shiftwidth=2
 set expandtab
-set tabstop=2
+set tabstop=8
 set softtabstop=2
 set textwidth=80
 
@@ -53,16 +61,12 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 " Map TAB to indent code
 map <TAB> mzgg=G`z<CR>
 
-" Mouse
-"set mouse=a
-"set ttymouse=xterm2
-
-" Colours
-syntax on
-set background=dark
-" colorscheme smyck
-"let g:nofrils_strbackgrounds=1
-colorscheme nofrils-dark
+" " Mouse
+" if has("mouse")
+"   set mouse=a
+"   set nomousehide
+"   set ttymouse=xterm2
+" endif
 
 " Splits
 nnoremap <C-J> <C-W><C-J>
@@ -96,3 +100,9 @@ map g/ <Plug>(incsearch-stay)
 " airline
 "let g:airline_powerline_fonts = 1
 set laststatus=2
+
+" Colours
+syntax on
+set background=dark
+let g:nofrils_strbackgrounds=0
+colorscheme nofrils-dark
