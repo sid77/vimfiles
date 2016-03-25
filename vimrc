@@ -3,6 +3,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 scriptencoding utf-8
 
+" Meh
+let s:os = substitute(system('uname -s'), "\n", "", "")
+
 " Plug
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
@@ -17,7 +20,9 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+if s:os != 'OpenBSD'
+  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+endif
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'bling/vim-airline'
