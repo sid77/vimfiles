@@ -25,6 +25,7 @@ git_clone robertmeta nofrils
 )
 
 ( cd $HOME
+  ln -sf $GITHUB_DIR/sid77/vimfiles/nexrc .nexrc
   ln -sf $GITHUB_DIR/sid77/vimfiles/vimrc .vimrc
   vim -c 'PlugInstall | quit | quit'
 )
