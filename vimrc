@@ -110,4 +110,5 @@ set laststatus=2
 syntax on
 set background=dark
 let g:nofrils_strbackgrounds=0
+let g:nofrils_heavycomments=1
 colorscheme nofrils-dark
