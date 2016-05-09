@@ -9,7 +9,12 @@ let s:os = substitute(system('uname -s'), "\n", "", "")
 " Plug
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
-    !./install.py --clang-completer --gocode-completer
+    if s:os == 'OpenBSD'
+      let ycm_install_command = '!./install.py --gocode-completer --system-boost'
+    else
+      let ycm_install_command = '!./install.py --gocode-completer --clang-completer'
+    endif
+    execute ycm_install_command
   endif
 endfunction
 call plug#begin()
@@ -20,9 +25,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-if s:os != 'OpenBSD'
-  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-endif
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'bling/vim-airline'
