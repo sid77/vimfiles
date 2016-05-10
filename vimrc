@@ -9,10 +9,11 @@ let s:os = substitute(system('uname -s'), "\n", "", "")
 " Plug
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
+    let ycm_install_command = '!./install.py --gocode-completer'
     if s:os == 'OpenBSD'
-      let ycm_install_command = '!./install.py --gocode-completer --system-boost'
+      let ycm_install_command = ycm_install_command . ' --system-boost'
     else
-      let ycm_install_command = '!./install.py --gocode-completer --clang-completer'
+      let ycm_install_command = ycm_install_command . ' --clang-completer'
     endif
     execute ycm_install_command
   endif
