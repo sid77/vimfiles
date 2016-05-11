@@ -12,8 +12,6 @@ function! BuildYCM(info)
     let ycm_install_command = '!./install.py --gocode-completer'
     if s:os == 'OpenBSD'
       let ycm_install_command = ycm_install_command . ' --system-boost'
-    else
-      let ycm_install_command = ycm_install_command . ' --clang-completer'
     endif
     execute ycm_install_command
   endif
