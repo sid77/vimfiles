@@ -9,11 +9,17 @@ let s:os = substitute(system('uname -s'), "\n", "", "")
 " Plug
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
-    let ycm_install_command = '!./install.py --gocode-completer'
     if s:os == 'OpenBSD'
-      let ycm_install_command = ycm_install_command . ' --system-boost'
+      " Go to hell YouCompleteMe
+      silent !rm -rf .ycm_build
+      silent !mkdir .ycm_build
+      silent !cd .ycm_build && cmake -DUSE_SYSTEM_BOOST=ON -G "Unix Makefiles" . ../third_party/ycmd/cpp
+      silent !cd .ycm_build && cmake --build . --target ycm_core
+      silent !cd third_party/ycmd/third_party/gocode && go build && install -m 0755 gocode $GOPATH/bin/
+      redraw!
+    else
+      !./install.py --gocode-completer
     endif
-    execute ycm_install_command
   endif
 endfunction
 call plug#begin()
@@ -107,6 +113,11 @@ map g/ <Plug>(incsearch-stay)
 " airline
 "let g:airline_powerline_fonts = 1
 set laststatus=2
+
+" YouCompleteMe
+if s:os == 'OpenBSD'
+  let g:ycm_server_python_interpreter = '/usr/local/bin/python2.7'
+endif
 
 " Colours
 syntax on
