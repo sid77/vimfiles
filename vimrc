@@ -30,7 +30,9 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+if s:os != 'OpenBSD'
+  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+endif
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'bling/vim-airline'
