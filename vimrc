@@ -28,8 +28,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-bundler'
 if s:os != 'OpenBSD'
   Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 endif
