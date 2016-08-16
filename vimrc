@@ -59,6 +59,9 @@ set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 autocmd filetype go set listchars=tab:\ \ ,trail:•,extends:#,nbsp:.
 
+" Move viminfo inside .vim
+set viminfo+=n~/.vim/viminfo
+
 " The ninties called and they wanted their 80 columns back
 set autoindent
 set shiftwidth=2
