@@ -57,7 +57,6 @@ set wildmenu
 set wildmode=list:longest,full
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
-autocmd filetype go set listchars=tab:\ \ ,trail:•,extends:#,nbsp:.
 
 " Move viminfo inside .vim
 set viminfo+=n~/.vim/viminfo
@@ -70,6 +69,9 @@ set tabstop=8
 set softtabstop=2
 set textwidth=80
 
+" Filetype customizations
+autocmd filetype c set listchars=tab:\ \ ,trail:•,extends:#,nbsp:. shiftwidth=8 softtabstop=8
+autocmd filetype go set listchars=tab:\ \ ,trail:•,extends:#,nbsp:.
 " Markdown support (sorry Modula-2)
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
