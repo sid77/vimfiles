@@ -24,6 +24,9 @@ git_clone robertmeta nofrils
   ln -sf $GITHUB_DIR/robertmeta/nofrils/colors/nofrils-dark.vim
 )
 
+mkdir -p $HOME/.vim/backup
+mkdir -p $HOME/.vim/swap
+mkdir -p $HOME/.vim/undo
 ( cd $HOME
   ln -sf $GITHUB_DIR/sid77/vimfiles/nexrc .nexrc
   ln -sf $GITHUB_DIR/sid77/vimfiles/vimrc .vimrc

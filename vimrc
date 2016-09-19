@@ -6,6 +6,9 @@ scriptencoding utf-8
 " Meh
 let s:os = substitute(system('uname -s'), "\n", "", "")
 
+" Remap leader from '\' to ','
+let mapleader = ','
+
 " Plug
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
@@ -58,8 +61,11 @@ set wildmode=list:longest,full
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
-" Move viminfo inside .vim
+" Move a bunch of stuff inside .vim
 set viminfo+=n~/.vim/viminfo
+set directory=~/.vim/swap
+set backupdir=~/.vim/backup
+set undodir=~/.vim/undo
 
 " The ninties called and they wanted their 80 columns back
 set autoindent
@@ -125,6 +131,18 @@ set laststatus=2
 if s:os == 'OpenBSD'
   let g:ycm_server_python_interpreter = '/usr/local/bin/python2.7'
 endif
+
+" Fugitive
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gr :Gread<CR>
+nnoremap <silent> <leader>gw :Gwrite<CR>
+nnoremap <silent> <leader>ge :Gedit<CR>
+nnoremap <silent> <leader>ga :Git add .<CR>
 
 " Colours
 syntax on
