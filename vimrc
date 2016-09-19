@@ -10,30 +10,13 @@ let s:os = substitute(system('uname -s'), "\n", "", "")
 let mapleader = ','
 
 " Plug
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    if s:os == 'OpenBSD'
-      " Go to hell YouCompleteMe
-      silent !rm -rf .ycm_build
-      silent !mkdir .ycm_build
-      silent !cd .ycm_build && cmake -DUSE_SYSTEM_BOOST=ON -G "Unix Makefiles" . ../third_party/ycmd/cpp
-      silent !cd .ycm_build && cmake --build . --target ycm_core
-      silent !cd third_party/ycmd/third_party/gocode && go build && install -m 0755 gocode $GOPATH/bin/
-      redraw!
-    else
-      !./install.py --gocode-completer
-    endif
-  endif
-endfunction
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
-if s:os != 'OpenBSD'
-  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-endif
+Plug 'Shougo/neocomplete.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'bling/vim-airline'
@@ -127,11 +110,6 @@ map g/ <Plug>(incsearch-stay)
 "let g:airline_powerline_fonts = 1
 set laststatus=2
 
-" YouCompleteMe
-if s:os == 'OpenBSD'
-  let g:ycm_server_python_interpreter = '/usr/local/bin/python2.7'
-endif
-
 " Fugitive
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -143,6 +121,10 @@ nnoremap <silent> <leader>gr :Gread<CR>
 nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
 nnoremap <silent> <leader>ga :Git add .<CR>
+
+" NeoComplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
 
 " Colours
 syntax on
