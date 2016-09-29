@@ -8,7 +8,13 @@ git_clone() {
   REPO_DIR="$GITHUB_DIR/$1"
   mkdir -p $REPO_DIR
   ( cd $REPO_DIR
-    git clone https://github.com/$1/$2.git
+    if [ -d $2 ]; then
+    ( cd $2
+      git pull
+    )
+    else
+      git clone https://github.com/$1/$2.git
+    fi
   )
 }
 
