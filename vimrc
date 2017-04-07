@@ -23,6 +23,7 @@ Plug 'bling/vim-airline'
 Plug 'haya14busa/incsearch.vim'
 Plug 'fatih/vim-go'
 Plug 'nvie/vim-flake8'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " General UI options
@@ -137,6 +138,9 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+" vim-terraform
+let g:terraform_fmt_on_save = 1
 
 " Colours
 syntax on
