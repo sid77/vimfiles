@@ -21,6 +21,8 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'fatih/vim-go'
 Plug 'nvie/vim-flake8'
 Plug 'hashivim/vim-terraform'
+Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 call plug#end()
 
 " General UI options
