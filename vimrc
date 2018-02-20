@@ -101,7 +101,7 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck'] " vim-go compatibi
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] } " vim-go compatibility
 let g:syntastic_c_include_dirs = ['/usr/X11R6/include']
 let g:syntastic_cpp_check_header = 1
-let g:syntastic_rust_checkers = ['cargo'] " rust-vim compatibility
+let g:syntastic_rust_checkers = ['cargo'] " rust.vim compatibility
 
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
@@ -144,6 +144,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 let g:terraform_fmt_on_save = 1
 
 " rust.vim
+let g:rustfmt_options = '-f'
 let g:rustfmt_autosave = 1
 
 " Colours
