@@ -16,6 +16,8 @@ Plug 'tpope/vim-commentary'
 Plug 'Shougo/neocomplete.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'sid77/nerdtree-custom-mappings-plugin'
 Plug 'bling/vim-airline'
 Plug 'haya14busa/incsearch.vim'
 Plug 'fatih/vim-go'
@@ -102,6 +104,14 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] } " v
 let g:syntastic_c_include_dirs = ['/usr/X11R6/include']
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_rust_checkers = ['cargo'] " rust.vim compatibility
+
+" NERDTree
+"autocmd vimenter * NERDTree " show NERDTREE when opening a file
+autocmd StdinReadPre * let s:std_in=1                                       " show NERDTree when no files are open on startup
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " show NERDTree when no files are open on startup
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeQuitOnOpen = 1
 
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
