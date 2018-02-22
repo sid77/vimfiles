@@ -112,6 +112,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " sh
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeQuitOnOpen = 1
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = 'v'
+highlight NERDTreeDir NONE
 
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
