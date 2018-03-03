@@ -1,0 +1,27 @@
+{
+  "keymaps": {
+    "h": { "type": "scroll.horizonally", "count": -1 },
+    "j": { "type": "scroll.vertically", "count": 1 },
+    "k": { "type": "scroll.vertically", "count": -1 },
+    "l": { "type": "scroll.horizonally", "count": 1 },
+    "gg": { "type": "scroll.top" },
+    "G": { "type": "scroll.bottom" },
+    "f": { "type": "follow.start", "newTab": false },
+    "F": { "type": "follow.start", "newTab": true },
+    "J": { "type": "tabs.prev", "count": 1 },
+    "K": { "type": "tabs.next", "count": 1 },
+    "x": { "type": "tabs.close" },
+    "u": { "type": "tabs.reopen" },
+    "r": { "type": "tabs.reload", "cache": false },
+    "R": { "type": "tabs.reload", "cache": true },
+    "zp": { "type": "tabs.pin.toggle" },
+    ":": { "type": "command.show" },
+    "/": { "type": "find.start" },
+    "n": { "type": "find.next" },
+    "N": { "type": "find.prev" }
+  },
+  "search": {
+  },
+  "properties": {
+  }
+}
