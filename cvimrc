@@ -1,0 +1,25 @@
+" blacklist
+let blacklists = ["https://github.com/*"]
+
+" unmap everything
+unmapAll
+iunmapAll
+
+" page navigation
+map h scrollLeft
+map j scrollDown
+map k scrollUp
+map l scrollRight
+map gg scrollToTop
+map G scrollToBottom
+map f createHint
+map F createTabbedHint
+
+" tabs
+map J previousTab
+map K nextTab
+
+" commands
+map . repeatCommand
+map : openCommandBar
+map / openSearchBar
