@@ -16,8 +16,8 @@ map f createHint
 map F createTabbedHint
 
 " tabs
-map J previousTab
-map K nextTab
+map J nextTab
+map K previousTab
 map x closeTab
 map u lastClosedTab
 map r reloadTab
