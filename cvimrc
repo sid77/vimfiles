@@ -3,7 +3,7 @@ set noautofocus
 set autoupdategist
 
 " blacklist
-let blacklists = ["https://docs.google.com/*"]
+let blacklists = ["https://docs.google.com/*", "https://hangouts.google.com/*"]
 
 " unmap everything
 unmapAll
