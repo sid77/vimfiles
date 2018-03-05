@@ -1,9 +1,12 @@
+" settings
+set noautofocus
+set autoupdategist
+
 " blacklist
-let blacklists = ["https://github.com/*"]
+let blacklists = ["https://docs.google.com/*"]
 
 " unmap everything
 unmapAll
-iunmapAll
 
 " page navigation
 map h scrollLeft
@@ -18,7 +21,7 @@ map F createTabbedHint
 " tabs
 map J nextTab
 map K previousTab
-map x closeTab
+map d closeTab
 map u lastClosedTab
 map r reloadTab
 map R reloadTabUncached
