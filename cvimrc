@@ -2,9 +2,6 @@
 set noautofocus
 set autoupdategist
 
-" blacklist
-let blacklists = ["https://docs.google.com/*", "https://hangouts.google.com/*"]
-
 " unmap everything
 unmapAll
 
@@ -31,3 +28,9 @@ map zp pinTab
 map . repeatCommand
 map : openCommandBar
 map / openSearchBar
+
+" blacklist
+let blacklists = ["https://docs.google.com/*", "https://hangouts.google.com/*"]
+site 'https://inbox.google.com/*' {
+  unmap u
+}
