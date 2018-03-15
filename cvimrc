@@ -30,7 +30,7 @@ map : openCommandBar
 map / openSearchBar
 
 " blacklist
-let blacklists = ["https://docs.google.com/*", "https://hangouts.google.com/*"]
+let blacklists = ["https://docs.google.com/*"]
 site 'https://inbox.google.com/*' {
   unmap u
 }
