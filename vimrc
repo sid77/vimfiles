@@ -15,7 +15,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/neocomplete.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'sid77/nerdtree-custom-mappings-plugin'
 Plug 'bling/vim-airline'
@@ -91,19 +91,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden = 1
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck'] " vim-go compatibility
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] } " vim-go compatibility
-let g:syntastic_c_include_dirs = ['/usr/X11R6/include']
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_rust_checkers = ['cargo'] " rust.vim compatibility
+" Ale
+let g:airline#extensions#ale#enabled = 1 " always on statusline
+let g:ale_lint_on_text_changed = 'never' " do not lint-as-you-type
 
 " NERDTree
 "autocmd vimenter * NERDTree " show NERDTREE when opening a file
