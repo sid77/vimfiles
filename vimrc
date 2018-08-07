@@ -13,7 +13,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
-Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'          " required by deoplete
+Plug 'roxma/vim-hug-neovim-rpc' " required by deoplete
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
@@ -85,6 +87,9 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
