@@ -11,11 +11,12 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
+" Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'          " required by deoplete
 Plug 'roxma/vim-hug-neovim-rpc' " required by deoplete
+Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
@@ -89,6 +90,9 @@ set splitright
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+
+" SuperTab
+let g:SuperTabCrMapping = 1
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
