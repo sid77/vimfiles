@@ -27,7 +27,6 @@ Plug 'nvie/vim-flake8'
 Plug 'hashivim/vim-terraform'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
-Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " General UI options
@@ -134,10 +133,6 @@ nnoremap <silent> <leader>ga :Git add .<CR>
 
 " vim-terraform
 let g:terraform_fmt_on_save = 1
-
-" rust.vim
-let g:rustfmt_options = '-f'
-let g:rustfmt_autosave = 1
 
 " Colours
 syntax on
