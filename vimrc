@@ -93,6 +93,7 @@ let g:deoplete#enable_at_startup = 1
 
 " SuperTab
 let g:SuperTabCrMapping = 1
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
