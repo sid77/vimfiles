@@ -49,7 +49,7 @@ set wildmode=list:longest,full
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
-" Move a bunch of stuff inside .vim
+" Move a bunch of stuff inside ~/.vim
 set viminfo+=n~/.vim/viminfo
 set directory=~/.vim/swap
 set backupdir=~/.vim/backup
