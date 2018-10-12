@@ -136,6 +136,9 @@ nnoremap <silent> <leader>gw :Gwrite<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
 nnoremap <silent> <leader>ga :Git add .<CR>
 
+" vim-go
+let g:go_fmt_command = "goimports"
+
 " vim-terraform
 let g:terraform_fmt_on_save = 1
 
