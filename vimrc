@@ -62,6 +62,9 @@ set expandtab
 set tabstop=8
 set softtabstop=2
 set textwidth=80
+" ...
+autocmd bufnewfile *.rb setlocal textwidth=160
+autocmd bufreadpre *.rb setlocal textwidth=160
 
 " Filetype customizations
 autocmd filetype c set listchars=tab:\ \ ,trail:•,extends:#,nbsp:. shiftwidth=8 softtabstop=8
