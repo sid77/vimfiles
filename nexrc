@@ -1,7 +1,44 @@
+" auto indentation of new lines
 set autoindent
+
+" EVERYBODY STAND BACK: I KNOW REGULAR EXPRESSIONS!
+set extended
+
+" case insensitive search unless a capital letter is used
+set iclower
+
+" horizontal scrolling
+set leftright
+
+" line numberss
 set number
+
+" number of lines about which the editor reports changes
+set report=1
+
+" rows and columns information
+set ruler
+
+" incremental search
 set searchincr
+
+" auto indentation with 2 spaces
+set shiftwidth=2
+
+" show matching parentheses (and friends)
+set showmatch
+
+" display current mode
 set showmode
+
+" spaces! tabs! spaces!
+set tabstop=2
+
+" display ALL error messages
 set verbose
+
+" warn on closing
 set warn
+
+" wrap around searches
 set wrapscan
