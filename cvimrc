@@ -31,3 +31,9 @@ map / openSearchBar
 
 " blacklist
 let blacklists = ["https://docs.google.com/*"]
+site 'https://www.netflix.com/*' {
+  unmap f
+  unmap F
+  map q createHint
+  map Q createTabbedHint
+}
