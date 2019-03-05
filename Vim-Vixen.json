@@ -1,27 +1,93 @@
 {
   "keymaps": {
-    "h": { "type": "scroll.horizonally", "count": -1 },
-    "j": { "type": "scroll.vertically", "count": 1 },
-    "k": { "type": "scroll.vertically", "count": -1 },
-    "l": { "type": "scroll.horizonally", "count": 1 },
-    "gg": { "type": "scroll.top" },
-    "G": { "type": "scroll.bottom" },
-    "f": { "type": "follow.start", "newTab": false },
-    "F": { "type": "follow.start", "newTab": true },
-    "J": { "type": "tabs.next", "count": 1 },
-    "K": { "type": "tabs.prev", "count": 1 },
-    "x": { "type": "tabs.close" },
-    "u": { "type": "tabs.reopen" },
-    "r": { "type": "tabs.reload", "cache": false },
-    "R": { "type": "tabs.reload", "cache": true },
-    "zp": { "type": "tabs.pin.toggle" },
-    ":": { "type": "command.show" },
-    "/": { "type": "find.start" },
-    "n": { "type": "find.next" },
-    "N": { "type": "find.prev" }
+    "": {
+      "type": "addon.toggle.enabled"
+    },
+    ":": {
+      "type": "command.show"
+    },
+    "b": {
+      "type": "command.show.buffer"
+    },
+    "k": {
+      "type": "scroll.vertically",
+      "count": -1
+    },
+    "j": {
+      "type": "scroll.vertically",
+      "count": 1
+    },
+    "l": {
+      "type": "scroll.horizonally",
+      "count": 1
+    },
+    "gg": {
+      "type": "scroll.top"
+    },
+    "G": {
+      "type": "scroll.bottom"
+    },
+    "d": {
+      "type": "tabs.close"
+    },
+    "u": {
+      "type": "tabs.reopen"
+    },
+    "K": {
+      "type": "tabs.prev",
+      "count": 1
+    },
+    "J": {
+      "type": "tabs.next",
+      "count": 1
+    },
+    "r": {
+      "type": "tabs.reload",
+      "cache": false
+    },
+    "R": {
+      "type": "tabs.reload",
+      "cache": true
+    },
+    "zp": {
+      "type": "tabs.pin.toggle"
+    },
+    "f": {
+      "type": "follow.start",
+      "newTab": false
+    },
+    "F": {
+      "type": "follow.start",
+      "newTab": true
+    },
+    "/": {
+      "type": "find.start"
+    },
+    "n": {
+      "type": "find.next"
+    },
+    "N": {
+      "type": "find.prev"
+    },
+    "h": {
+      "type": "scroll.horizonally",
+      "count": -1
+    }
   },
   "search": {
+    "default": "google",
+    "engines": {
+      "google": "https://google.com/search?q={}",
+      "yahoo": "https://search.yahoo.com/search?p={}",
+      "bing": "https://www.bing.com/search?q={}",
+      "duckduckgo": "https://duckduckgo.com/?q={}",
+      "twitter": "https://twitter.com/search?q={}",
+      "wikipedia": "https://en.wikipedia.org/w/index.php?search={}"
+    }
   },
   "properties": {
+    "hintchars": "abcdefghijklmnopqrstuvwxyz",
+    "smoothscroll": false,
+    "complete": "sbh"
   }
 }
