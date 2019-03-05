@@ -28,6 +28,9 @@ map zp pinTab
 map . repeatCommand
 map : openCommandBar
 map / openSearchBar
+map n nextSearchResult
+map N previousSearchResult
+
 
 " blacklist
 let blacklists = ["https://docs.google.com/*"]
