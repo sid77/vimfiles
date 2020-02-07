@@ -22,7 +22,6 @@ Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'sid77/nerdtree-custom-mappings-plugin'
 Plug 'bling/vim-airline'
-Plug 'haya14busa/incsearch.vim'
 Plug 'fatih/vim-go'
 Plug 'nvie/vim-flake8'
 Plug 'hashivim/vim-terraform'
@@ -116,11 +115,6 @@ let NERDTreeQuitOnOpen = 1
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 highlight NERDTreeDir NONE
-
-" incsearch.vim
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
 
 " airline
 "let g:airline_powerline_fonts = 1
