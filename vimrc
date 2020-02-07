@@ -61,14 +61,13 @@ set tabstop=8
 set softtabstop=2
 set textwidth=80
 " ...
-autocmd bufnewfile *.rb setlocal textwidth=160
-autocmd bufreadpre *.rb setlocal textwidth=160
+autocmd bufnewfile,bufreadpost *.rb setlocal textwidth=160
 
 " Filetype customizations
 autocmd filetype c set listchars=tab:\ \ ,trail:•,extends:#,nbsp:. shiftwidth=8 softtabstop=8
-autocmd filetype go set listchars=tab:\ \ ,trail:•,extends:#,nbsp:.
+autocmd bufnewfile,bufreadpost *.go set listchars=tab:\ \ ,trail:•,extends:#,nbsp:.
 " Markdown support (sorry Modula-2)
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd bufnewfile,bufreadpost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 " Map TAB to indent code
