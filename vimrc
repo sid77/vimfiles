@@ -18,7 +18,7 @@ Plug 'roxma/nvim-yarp'          " required by deoplete
 Plug 'roxma/vim-hug-neovim-rpc' " required by deoplete
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'sid77/nerdtree-custom-mappings-plugin'
 Plug 'bling/vim-airline'
