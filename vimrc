@@ -103,6 +103,8 @@ let g:ctrlp_show_hidden = 1
 " Ale
 let g:airline#extensions#ale#enabled = 1 " always on statusline
 let g:ale_lint_on_text_changed = 'never' " do not lint-as-you-type
+let g:ale_fix_on_save = 1                " fix on save, fixers below
+let g:ale_fixers = { 'javascript': ['eslint'], 'python': ['black'], 'typescript': ['eslint'] }
 
 " NERDTree
 "autocmd vimenter * NERDTree " show NERDTREE when opening a file
