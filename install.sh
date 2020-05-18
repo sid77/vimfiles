@@ -38,3 +38,8 @@ mkdir -p "$HOME/.vim/undo"
   ln -sf "$GITHUB_DIR/sid77/vimfiles/vimrc" .vimrc
   vim -c 'PlugInstall | quit | quit'
 )
+
+mkdir -p "$HOME/.config/nvim"
+( cd "$HOME/.config/nvim"
+  ln -sf "$GITHUB_DIR/sid77/vimfiles/init.vim"
+)
