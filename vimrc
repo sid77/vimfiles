@@ -4,7 +4,7 @@ set fileencoding=utf-8
 scriptencoding utf-8
 
 " Remap leader from '\' to ','
-let mapleader = ','
+" let mapleader = ','
 
 " Plug
 call plug#begin()
