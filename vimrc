@@ -18,8 +18,6 @@ Plug 'roxma/nvim-yarp'          " required by deoplete
 Plug 'roxma/vim-hug-neovim-rpc' " required by deoplete
 Plug 'ervandew/supertab'
 Plug 'dense-analysis/ale'
-Plug 'scrooloose/nerdtree'
-Plug 'sid77/nerdtree-custom-mappings-plugin'
 Plug 'bling/vim-airline'
 Plug 'fatih/vim-go'
 Plug 'nvie/vim-flake8'
@@ -99,17 +97,6 @@ let g:airline#extensions#ale#enabled = 1 " always on statusline
 let g:ale_lint_on_text_changed = 'never' " do not lint-as-you-type
 let g:ale_fix_on_save = 1                " fix on save, fixers below
 let g:ale_fixers = { 'javascript': ['eslint'], 'python': ['black'], 'typescript': ['eslint'] }
-
-" NERDTree
-"autocmd vimenter * NERDTree " show NERDTREE when opening a file
-autocmd StdinReadPre * let s:std_in=1                                       " show NERDTree when no files are open on startup
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " show NERDTree when no files are open on startup
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let NERDTreeQuitOnOpen = 1
-let g:NERDTreeDirArrowExpandable = '>'
-let g:NERDTreeDirArrowCollapsible = 'v'
-highlight NERDTreeDir NONE
 
 " airline
 "let g:airline_powerline_fonts = 1
