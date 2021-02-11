@@ -17,7 +17,6 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'          " required by deoplete
 Plug 'roxma/vim-hug-neovim-rpc' " required by deoplete
 Plug 'ervandew/supertab'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'sid77/nerdtree-custom-mappings-plugin'
@@ -94,11 +93,6 @@ let g:deoplete#enable_at_startup = 1
 " SuperTab
 let g:SuperTabCrMapping = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_show_hidden = 1
 
 " Ale
 let g:airline#extensions#ale#enabled = 1 " always on statusline
